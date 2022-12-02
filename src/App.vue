@@ -1,28 +1,201 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section id="app">
+
+        <header class="header">
+            <img class="logoVue" src="./assets/logo.png">
+            <h4 class="logo">{{titulo}}</h4>
+        </header>   
+        <main class="main">
+            <h1 class="tituloMain">Componente Tabla</h1>
+            <p class="textoMain">Renderizar varias veces un componente Table con algunas cosas customizables y tomando datos de diferentes fuentes</p>
+            <article class="contenedorTabla" >
+                <MiTabla :tabledata="grupoa" titulo="Grupo A" tablestyle="table-info" backgroundheader="text-bg-info"></MiTabla>
+                <MiTabla :tabledata="grupob" titulo="Grupo B" tablestyle="table-warning" backgroundheader="text-bg-warning"></MiTabla>
+                <MiTabla :tabledata="grupoc" titulo="Grupo C" tablestyle="table-success" backgroundheader="text-bg-success"></MiTabla>
+            </article>
+        </main>
+        <footer class="footer">
+            <h6>Hola soy el Footer</h6>
+        </footer>
+    </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MiTabla from './components/MiTabla.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MiTabla
+  },
+  data(){
+    return{
+        titulo:"Guille Chiantore - Desafio Creacion de componentes en Vue - Tablas",
+        columnas:{
+            col1:"ISO",
+            col2:"Pais",
+            col4:"imagen"
+        },
+        grupoa:[
+            {
+                iso:"AR",
+                pais:"Argentina",
+                imagen:"../assets/ar.png"
+            },
+            {
+                iso:"BR",
+                pais:"Brasil",
+                imagen:"../assets/br.png"
+            },
+            {
+                iso:"NL",
+                pais:"Netherland",
+                imagen:"../assets/nl.png"
+            },
+            {
+                iso:"ES",
+                pais:"España",
+                imagen:"../assets/es.png"
+            },
+        ],
+        grupob:[
+            {
+                iso:"US",
+                pais:"Australia",
+                imagen:"../assets/au.png"
+            },
+            {
+                iso:"GH",
+                pais:"Ghana",
+                imagen:"../assets/gh.png"
+            },
+            {
+                iso:"FR",
+                pais:"Francia",
+                imagen:"../assets/fr.png"
+            },
+            {
+                iso:"CA",
+                pais:"Canada",
+                imagen:"../assets/ca.png"
+            }
+        ],
+        grupoc:[
+            {
+                iso:"US",
+                pais:"Estados Unidos",
+                imagen:"../assets/us.png"
+            },
+            {
+                iso:"CR",
+                pais:"Costa Rica",
+                imagen:"../assets/cr.png"
+            },
+            {
+                iso:"IR",
+                pais:"Iran",
+                imagen:"../assets/ir.png"
+            },
+            {
+                iso:"SA",
+                pais:"Arabia Saudita",
+                imagen:"../assets/sa.png"
+            },
+        ],  
+      }
+    }  
   }
-}
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#19234F;
+    color:#BDAA75;
+}
+
+.logo{
+    
+    font-weight: 100;
+    margin: 10px;
+}
+
+.main{
+    width: 100%;
+    padding-top:100px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:lightgrey;
+    color:#000000;
+}
+.tituloMain{
+    margin: 15px;
+}
+
+.textoMain{
+    margin: 10px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contenedorTabla{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    color:#BDAA75;
+}
+
+.tituloMain{
+    margin: 15px;
+}
+
+.logoVue{
+  width: 50px;
+  height: 50px;
+}
+.textoMain{
+    margin: 10px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contenedorTabla{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    color:#BDAA75;
+}
+
+.footer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#19234F;
+    color:#BDAA75;
 }
 </style>
