@@ -40,66 +40,66 @@ export default {
             {
                 iso:"AR",
                 pais:"Argentina",
-                imagen:"../assets/ar.png"
+                imagen:"ar.png"
             },
             {
                 iso:"BR",
                 pais:"Brasil",
-                imagen:"../assets/br.png"
+                imagen:"br.png"
             },
             {
                 iso:"NL",
                 pais:"Netherland",
-                imagen:"../assets/nl.png"
+                imagen:"nl.png"
             },
             {
                 iso:"ES",
                 pais:"España",
-                imagen:"../assets/es.png"
+                imagen:"es.png"
             },
         ],
         grupob:[
             {
                 iso:"US",
                 pais:"Australia",
-                imagen:"../assets/au.png"
+                imagen:"au.png"
             },
             {
                 iso:"GH",
                 pais:"Ghana",
-                imagen:"../assets/gh.png"
+                imagen:"gh.png"
             },
             {
                 iso:"FR",
                 pais:"Francia",
-                imagen:"../assets/fr.png"
+                imagen:"fr.png"
             },
             {
                 iso:"CA",
                 pais:"Canada",
-                imagen:"../assets/ca.png"
+                imagen:"ca.png"
             }
         ],
         grupoc:[
             {
                 iso:"US",
                 pais:"Estados Unidos",
-                imagen:"../assets/us.png"
+                imagen:"us.png"
             },
             {
                 iso:"CR",
                 pais:"Costa Rica",
-                imagen:"../assets/cr.png"
+                imagen:"cr.png"
             },
             {
                 iso:"IR",
                 pais:"Iran",
-                imagen:"../assets/ir.png"
+                imagen:"ir.png"
             },
             {
                 iso:"SA",
                 pais:"Arabia Saudita",
-                imagen:"../assets/sa.png"
+                imagen:"sa.png"
             },
         ],  
       }

@@ -13,9 +13,9 @@
                     <tbody>
                         <tr :class="i%2==0? 'table-active':tablestyle" v-for="(itemdata,i) of tabledata" :key="i">
                             <td>
-                                <img class="avatarCol" :src="itemdata.imagen">
+                                <img class="avatarCol" :src="require('@/assets/'+itemdata.imagen)">
                             </td>
-                            <td>{{itemdata.iso}}</td>
+                            <td>{{itemdata.imagen}}</td>
                             <td>{{itemdata.pais}}</td>
                         </tr> 
                     </tbody>
